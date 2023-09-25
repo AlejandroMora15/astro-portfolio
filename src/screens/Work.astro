@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import BigWorkIcon from '../assets/BigWorkIcon.astro';
+import INDESAP from '../assets/indesap_negro.png';
+---
+
+<article
+  id='work'
+  class='flex flex-col min-h-screen items-center justify-center mr-4'
+>
+  <div class='sm:w-3/5'>
+    <header class='flex gap-4 items-center mb-12'>
+      <BigWorkIcon />
+      <h1 class='sm:text-5xl text-3xl text-blue-200 font-bold'>
+        Experiencia laboral
+      </h1>
+    </header>
+    <div
+      class='sm:p-12 p-6 border-2 border-gray-600 rounded-2xl scale-95 hover:scale-100 transition-transform ease-in flex flex-col gap-4'
+    >
+      <div
+        class='bg-slate-200 p-6 rounded-2xl flex justify-center items-center'
+      >
+        <Image src={INDESAP} alt='Indesap' class='h-auto w-56' />
+      </div>
+      <div>
+        <h2
+          class='sm:text-3xl text-3xl font-semibold text-slate-200 text-center'
+        >
+          Indesap S.A.S
+        </h2>
+        <h3 class='text-center sm:text-lg text-slate-400 font-semibold'>
+          2021 - Actual
+        </h3>
+        <ul class='list-disc ml-8 mt-4 text-slate-300 flex flex-col gap-2'>
+          <li>
+            Desarrollo de aplicaciones web-responsive y móviles, tanto <strong
+              >Frontend</strong
+            > como
+            <strong>Backend</strong>. Haciendo uso de tecnologías como React,
+            React Native, Javascript, Typescript, NodeJS, Express y MongoDB.
+          </li>
+          <li>Trabajo en equipo, en metodologías ágiles como Scrum y XP.</li>
+          <li>Análisis y diseño de requisitos.</li>
+          <li>
+            CI/CD de aplicaciones móviles en GooglePlay, y aplicaciones web con
+            Heroku.
+          </li>
+          <li>
+            Análisis de complejidad computacional y optimización de algoritmos.
+          </li>
+          <li>Integración de servicios de AWS, GoogleCloud y otras API's.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
