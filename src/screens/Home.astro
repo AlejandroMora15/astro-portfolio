@@ -26,12 +26,12 @@ import AppleIcon from '../assets/AppleIcon.astro';
       <h2 class='text-slate-200 sm:text-4xl text-lg font-semibold'>
         ¡Hola! 👋
       </h2>
-      <h1 class='text-slate-200 sm:text-5xl text-2xl font-bold sm:my-3 my-1'>
+      <h1
+        class='text-slate-200 sm:text-5xl text-2xl font-bold sm:my-3 my-1 type-effect'
+      >
         Soy <span class='text-blue-200'>Alejandro Morales Ríos</span>
       </h1>
-      <h3 class='text-slate-300 sm:text-3xl text-xl font-semibold'>
-        Ingeniero en Sistemas y Telecomunicaciones
-      </h3>
+      <h3 id='role' class='sm:text-3xl text-xl font-semibold'></h3>
       <p class='sm:mt-12 text-slate-200 sm:text-lg mt-8 text-sm'>
         Apasionado <strong>desarrollador de software</strong> 💻 colombiano con
         un profundo compromiso por la excelencia técnica ✅ y creación de
@@ -92,3 +92,69 @@ import AppleIcon from '../assets/AppleIcon.astro';
     </div>
   </section>
 </article>
+<style>
+  .type-effect {
+    display: block;
+    line-height: 1.1;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 27ch;
+
+    animation:
+      typing 2s steps(27),
+      blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
+
+<script>
+  const phrases = [
+    {
+      text: 'Ingeniero en Sistemas y Telecomunicaciones',
+      color: '#1d4ed8',
+    },
+    { text: 'Desarrollador Frontend', color: '#22c55e' },
+    { text: 'Desarrollador Backend', color: '#f59e0b' },
+  ];
+
+  const typingElement = document.getElementById('role')!;
+  let currentPhraseIndex = 0;
+
+  function typeNextPhrase() {
+    typingElement.textContent = '';
+    const currentPhrase = phrases[currentPhraseIndex];
+    let charIndex = 0;
+
+    typingElement.style.color = currentPhrase.color;
+
+    function typeCharacter() {
+      if (charIndex < currentPhrase.text.length) {
+        typingElement.textContent += currentPhrase.text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeCharacter, 60);
+      } else {
+        setTimeout(() => {
+          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+          typeNextPhrase();
+        }, 2000);
+      }
+    }
+
+    typeCharacter();
+  }
+
+  typeNextPhrase();
+</script>
