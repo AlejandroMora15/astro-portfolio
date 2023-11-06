@@ -38,19 +38,22 @@ import LinkedInIcon from '../assets/LinkedInIcon.astro';
       <BulbIcon />
     </SidebarButton>
   </section>
-  <section class='flex flex-wrap justify-center items-center gap-4 mb-4'>
-    <SocialButton href='https://github.com/AlejandroMora15'>
-      <GithubIcon />
-    </SocialButton>
-    <SocialButton
-      href='https://www.instagram.com/invites/contact/?i=16uuzotg361q0&utm_content=274yzwp'
-    >
-      <InstagramIcon />
-    </SocialButton>
-    <SocialButton
-      href='https://www.linkedin.com/in/alejandro-morales-rios-95b953202'
-    >
-      <LinkedInIcon />
-    </SocialButton>
+  <section class='flex flex-col gap-2 mb-4'>
+    <div class="flex flex-wrap justify-center items-center gap-4">
+      <SocialButton href='https://github.com/AlejandroMora15'>
+        <GithubIcon />
+      </SocialButton>
+      <SocialButton
+        href='https://www.instagram.com/invites/contact/?i=16uuzotg361q0&utm_content=274yzwp'
+      >
+        <InstagramIcon />
+      </SocialButton>
+      <SocialButton
+        href='https://www.linkedin.com/in/alejandro-morales-rios-95b953202'
+      >
+        <LinkedInIcon />
+      </SocialButton>
+    </div>
+    <p class="text-center text-slate-400 hidden sm:block">legorios@gmail.com</p>
   </section>
 </aside>
