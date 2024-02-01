@@ -6,7 +6,7 @@ import InstagramIcon from '../icons/InstagramIcon.astro';
 ---
 
 <section
-  class='flex flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-11 xl:gap-12 items-center text-center'
+  class='flex flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-11 xl:gap-12 items-center text-center mb-28 sm:mb-36 md:mb-40 lg:mb-44 xl:mb-48'
 >
   <span
     class='text-xs bg-electric-violet-100 text-electric-violet-700 border-electric-violet-700 px-2 py-1 rounded-xl border-[1px]'
@@ -19,37 +19,52 @@ import InstagramIcon from '../icons/InstagramIcon.astro';
   </h1>
   <div class='flex gap-3'>
     <a
-      class='cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
-        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-colors duration-300 ease-in-out'
+      href='mailto:legorios@gmail.com'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
       '
     >
+      <span class='hidden'>Email</span>
       <EmailIcon className='w-5 h-5' />
     </a>
     <a
-      class='cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
-        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-colors duration-300 ease-in-out'
+      href='https://www.linkedin.com/in/alejandro-morales-rios-95b953202'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+      hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
       '
     >
+      <span class='hidden'>LinkedIn</span>
       <LinkedInIcon className='w-5 h-5' />
     </a>
     <a
-      class='cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
-        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-colors duration-300 ease-in-out'
+      href='https://github.com/AlejandroMora15'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+      hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
       '
     >
+      <span class='hidden'>Github</span>
       <GithubIcon className='w-5 h-5' />
     </a>
     <a
-      class='cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
-        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-colors duration-300 ease-in-out'
+      href='https://www.instagram.com/invites/contact/?i=16uuzotg361q0'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+    hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
       '
     >
+      <span class='hidden'>Instagram</span>
       <InstagramIcon className='w-5 h-5' />
     </a>
   </div>
-  <p class='mx-16 md:mx-20 text-sm sm:text-base'>
-    Con más de 5 años de experiencia en el desarrollo de aplicaciones web y
-    móviles, con conocimientos en el desarrollo de aplicaciones con React, React
-    Native, Node.js, Express, MongoDB, PostgreSQL, entre otros.
+  <p class='mx-16 md:mx-28 text-sm sm:text-base text-zinc-600'>
+    Desarrollador Fullstack colombiano con +5 años de experiencia en la creación
+    de aplicativos web y móviles de alta calidad y rendimiento.
   </p>
 </section>
