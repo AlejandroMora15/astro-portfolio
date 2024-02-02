@@ -8,7 +8,7 @@ const { photos } = Astro.props;
 
 <div id='controls-carousel' class='relative w-full' data-carousel='static'>
   <!-- Carousel wrapper -->
-  <div class='relative overflow-hidden rounded-t-lg h-64'>
+  <div class='relative overflow-hidden rounded-t-lg h-52 sm:h-64'>
     {
       photos.map((photo) => (
         <div class='hidden duration-300 ease-linear' data-carousel-item>
