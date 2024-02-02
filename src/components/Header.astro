@@ -1,0 +1,46 @@
+<header
+  class='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2'
+>
+  <nav
+    class='flex px-3 text-sm font-medium rounded-full text-electric-violet-400'
+  >
+    <a
+      class='relative block px-2 sm:px-4 py-2 transition hover:text-electric-violet-800'
+      aria-label='experiencia'
+      href='/#experiencia'
+    >
+      Experiencia
+    </a><a
+      class='relative block px-2 sm:px-4 py-2 transition hover:text-electric-violet-800'
+      aria-label='proyectos'
+      href='/#proyectos'
+    >
+      Proyectos
+    </a><a
+      class='relative block px-2 sm:px-4 py-2 transition hover:text-electric-violet-800'
+      aria-label='educacion'
+      href='/#educacion'
+    >
+      Educación
+    </a><a
+      class='relative block px-2 sm:px-4 py-2 transition hover:text-electric-violet-800'
+      aria-label='sobre-mi'
+      href='/#sobre-mi'
+    >
+      Sobre mi
+    </a>
+  </nav>
+</header>
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-200/60 ring-white/10;
+    }
+  }
+</style>
