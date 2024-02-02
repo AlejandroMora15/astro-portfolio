@@ -1,0 +1,82 @@
+---
+import GithubIcon from '../icons/GithubIcon.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import EmailIcon from '../icons/EmailIcon.astro';
+import InstagramIcon from '../icons/InstagramIcon.astro';
+import CVIcon from '../icons/CVIcon.astro';
+---
+
+<section
+  class='flex flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-11 xl:gap-12 items-center text-center'
+>
+  <span
+    class='text-xs bg-electric-violet-100 text-electric-violet-700 border-electric-violet-700 px-2 py-1 rounded-xl border-[1px]'
+    >Desarrollador Fullstack</span
+  >
+  <h1
+    class='text-5xl lg:text-6xl xl:text-7xl font-semibold text-electric-violet-800'
+  >
+    Alejandro Morales Rios
+  </h1>
+  <div class='flex gap-3'>
+    <a
+      href='CV - Alejandro Morales Ríos.pdf'
+      download='CV - Alejandro Morales Ríos.pdf'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
+      '
+    >
+      <span class='hidden'>CV</span>
+      <CVIcon className='w-5 h-5' />
+    </a>
+    <a
+      href='mailto:legorios@gmail.com'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+        hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
+      '
+    >
+      <span class='hidden'>Email</span>
+      <EmailIcon className='w-5 h-5' />
+    </a>
+    <a
+      href='https://www.linkedin.com/in/alejandro-morales-rios-95b953202'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+      hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
+      '
+    >
+      <span class='hidden'>LinkedIn</span>
+      <LinkedInIcon className='w-5 h-5' />
+    </a>
+    <a
+      href='https://github.com/AlejandroMora15'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+      hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
+      '
+    >
+      <span class='hidden'>Github</span>
+      <GithubIcon className='w-5 h-5' />
+    </a>
+    <a
+      href='https://www.instagram.com/invites/contact/?i=16uuzotg361q0'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:scale-105 cursor-pointer border-[1px] border-electric-violet-600 text-electric-violet-600 rounded-lg p-1
+    hover:border-electric-violet-800 hover:text-electric-violet-800 hover:bg-electric-violet-100 transition-all duration-300 ease-in-out'
+      '
+    >
+      <span class='hidden'>Instagram</span>
+      <InstagramIcon className='w-5 h-5' />
+    </a>
+  </div>
+  <p class='mx-16 md:mx-28 text-sm sm:text-base text-zinc-600'>
+    Desarrollador Fullstack colombiano con +4 años de experiencia en el uso de
+    Nodejs, React, React Native, Nextjs, Express y otras tecnologías para la
+    creación de aplicativos web y móviles de alta calidad y rendimiento.
+  </p>
+</section>

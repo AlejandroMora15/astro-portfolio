@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import Sidebar from '../components/Sidebar.astro';
 interface Props {
   title: string;
 }
@@ -9,59 +8,105 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link
-      rel='stylesheet'
-      href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+    <meta
+      name='description'
+      content='Alejandro Morales Rios - Desarrollador FullStack con más de 5 años de experiencia la creación de aplicaciones web y móviles.'
     />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/me.webp' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <link
+      href='https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css'
+      rel='stylesheet'
+    />
   </head>
   <body>
-    <main class='bg-blue-950 min-h-screen flex'>
-      <Sidebar />
-      <div class='sm:ml-96 ml-20 w-full'>
+    <main>
+      <header
+        class='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2'
+      >
+        <nav
+          class='flex px-3 text-sm font-medium rounded-full text-electric-violet-400'
+        >
+          <a
+            class='relative block px-4 py-2 transition hover:text-electric-violet-800'
+            aria-label='experiencia'
+            href='/#experiencia'
+          >
+            Experiencia
+          </a><a
+            class='relative block px-4 py-2 transition hover:text-electric-violet-800'
+            aria-label='proyectos'
+            href='/#proyectos'
+          >
+            Proyectos
+          </a><a
+            class='relative block px-4 py-2 transition hover:text-electric-violet-800'
+            aria-label='educacion'
+            href='/#educacion'
+          >
+            Educación
+          </a><a
+            class='relative block px-4 py-2 transition hover:text-electric-violet-800'
+            aria-label='sobre-mi'
+            href='/#sobre-mi'
+          >
+            Sobre mi
+          </a>
+        </nav>
+      </header>
+      <div class='fixed left-0 top-0 -z-10 h-full w-full'>
+        <div
+          class='absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]'
+        >
+        </div>
+      </div>
+      <div
+        class='mx-6 sm:mx-24 md:mx-48 lg:mx-64 xl:mx-96 my-24 sm:my-28 md:my-32 lg:my-36 xl:my-40'
+      >
         <slot />
       </div>
     </main>
     <style is:global>
-      :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
-        );
-      }
-      html {
-        font-family: system-ui, sans-serif;
-        background: #13151a;
-        background-size: 224px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         scroll-behavior: smooth;
       }
-      body::-webkit-scrollbar {
-        width: 0px;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
       }
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
+
+      p {
+        text-wrap: pretty;
+      }
+
+      nav {
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+      }
+
+      @keyframes nav-shadown {
+        to {
+          @apply shadow-lg ring-1 backdrop-blur bg-gray-200/60 ring-white/10;
+        }
       }
     </style>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js'
+    ></script>
   </body>
 </html>

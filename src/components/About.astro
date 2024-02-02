@@ -1,0 +1,45 @@
+---
+import AboutMeIcon from '../icons/AboutMeIcon.astro';
+---
+
+<section class='w-full pt-16' id='sobre-mi'>
+  <div class='flex gap-3 justify-center items-center mb-12'>
+    <AboutMeIcon className='h-9 w-9 text-electric-violet-800' />
+    <h2
+      class='text-center text-2xl lg:text-3xl font-semibold text-electric-violet-800'
+    >
+      Sobre mi
+    </h2>
+  </div>
+  <div class='flex flex-col-reverse lg:flex-row gap-8 items-center'>
+    <div class='flex flex-col gap-4 text-zinc-800'>
+      <p>
+        Hola! soy <b class='text-electric-violet-800'>Alejandro Morales Ríos</b
+        >, empecé en la programación en Scratch, cuando tenía 10 años y ahora
+        desarrollo aplicaciones de alto valor que mejoran la calidad de vida de
+        la sociedad.
+      </p>
+      <p>
+        Algunos de mis éxitos fue el desarrollar una herramienta para apoyar el
+        proceso de <b class='text-electric-violet-800'
+          >votaciones electorales en Colombia</b
+        >, un gran reto debido a la cantidad de datos a procesar, la seguridad y
+        tolerancia a fallos.
+      </p>
+      <p>
+        Tengo una vocación para enseñar, compartir y generar conocimientos, por
+        eso he participado en diversos <b class='text-electric-violet-800'
+          >proyectos de investigación</b
+        >, participando en eventos y ponencias en los que he tenido la
+        oportunidad de compartir mis conocimientos y aprender de los demás.
+      </p>
+    </div>
+    <figure>
+      <img
+        src='me.webp'
+        alt='Desarrollador web'
+        class='w-56 lg:w-auto mt-8 lg:mt-0 rounded-lg rotate-3 shadow-lg'
+      />
+    </figure>
+  </div>
+</section>

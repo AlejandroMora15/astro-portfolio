@@ -1,16 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Home from '../screens/Home.astro';
-import Projects from '../screens/Projects.astro';
-import School from '../screens/School.astro';
-import Work from '../screens/Work.astro';
+import Hero from '../components/Hero.astro';
+import Work from '../components/Work.astro';
+import Education from '../components/Education.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title='Alejandro Morales Ríos'>
-  <div class='flex flex-col gap-16'>
-    <Home />
-    <School />
+  <Hero />
+  <div class='w-full flex flex-col gap-20 mt-28'>
     <Work />
     <Projects />
+    <Education />
+    <About />
   </div>
 </Layout>

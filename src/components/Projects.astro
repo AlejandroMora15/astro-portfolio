@@ -1,0 +1,113 @@
+---
+import FoldersIcon from '../icons/FoldersIcon.astro';
+import LinkIcon from '../icons/LinkIcon.astro';
+import Carousel from './Carousel.astro';
+
+const data = [
+  {
+    name: 'ATEM (Automatic Term Extractor Multiplatform)',
+    photos: ['/ATEM-1.png', '/ATEM-2.png'],
+    description:
+      'Aplicación web y móvil para la extracción automática de términos de literatura científica en Internet de la Cosas (IoT). Permite cargar multiples archivos PDF, extraer los términos y exportarlos a Excel.',
+    techs: [
+      'Javascript',
+      'Python',
+      'React',
+      'React Native',
+      'Flask',
+      'onrender',
+    ],
+    url: 'https://atem-web.onrender.com',
+  },
+  {
+    name: 'HECEV',
+    photos: ['/HECEV-1.png', '/HECEV-2.png'],
+    description:
+      'Herramienta web que implementa un modelo matemático para evaluar, proyectar y predecir el consumo de energía y emisión vehicular hasta 2070. Maneja gran cantidad de datos, permite importar y exportar los datos a Excel y generar reportes PDF.',
+    techs: ['Javascript', 'React', 'Firebase', 'Bootstrap'],
+    url: 'https://hevc-actualizado.web.app/#/login',
+  },
+  {
+    name: 'BookHabit',
+    photos: ['/bookhabit-1.png', '/bookhabit-2.webp'],
+    description:
+      'App móvil para ayudar a crear un hábito de lectura. Permite generar estadísticas de la velocidad de lectura, así como gestionar los libros que se están leyendo, que se desean leer o que se han leído.',
+    techs: ['Typescript', 'React Native', 'Supabase', 'Zustand', 'Android'],
+    url: 'https://play.google.com/store/apps/details?id=com.alejomora15.bookhabitapp&hl=es_CO&gl=US',
+  },
+  {
+    name: 'PQRExtractor',
+    photos: ['/pqrextractor-1.png', '/pqrextractor-2.png'],
+    description:
+      'Herramienta web y móvil que hace uso de un modelo entrenado de lenguaje natural para clasificar los PQRs que llegan a la Empresa de Energía de Pereira. Consume la API interna de la empresa, permite generar reportes PDF y exportar los datos a Excel.',
+    techs: ['Typescript', 'Python', 'React', 'React Native', 'Flask'],
+    url: '',
+  },
+  {
+    name: 'FoodGPT',
+    photos: ['/foodgpt-1.webp', '/foodgpt-2.webp'],
+    description:
+      'App móvil que recibe una lista de ingredientes y te genera una receta a partir de ellos, utilizando la API de ChatGPT',
+    techs: [
+      'Typescript',
+      'React Native',
+      'Supabase',
+      'OpenAI - API',
+      'Android',
+    ],
+    url: 'https://play.google.com/store/apps/details?id=com.alejomora15.chefgpt',
+  },
+];
+---
+
+<section class='w-full pt-16' id='proyectos'>
+  <div class='flex gap-3 justify-center items-center mb-12'>
+    <FoldersIcon className='h-9 w-9 text-electric-violet-800' />
+    <h2
+      class='text-center text-2xl lg:text-3xl font-semibold text-electric-violet-800'
+    >
+      Proyectos
+    </h2>
+  </div>
+  <ul class='flex flex-col gap-8 items-center'>
+    {
+      data.map(({ name, photos, techs, description, url }) => (
+        <li class='w-full sm:w-[600px] flex flex-col backdrop-blur-sm bg-white/30 rounded-lg shadow-lg'>
+          <div class='rounded-lg min-w-72'>
+            <Carousel photos={photos} />
+          </div>
+          <div class='flex flex-col gap-4 p-4'>
+            <h3 class='text-lg md:text-xl font-semibold text-electric-violet-800'>
+              {name}
+            </h3>
+            <div class='flex gap-2'>
+              {techs.map((tech) => (
+                <span class='bg-electric-violet-100 border-[1px] border-electric-violet-800 text-electric-violet-800 px-2 py-1 rounded-md text-xs'>
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <p class='text-zinc-700 text-sm'>{description}</p>
+            {url.length ? (
+              <div class='w-min'>
+                <a
+                  href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  class='flex gap-1 items-center justify-center border-2 bg-electric-violet-700 hover:bg-transparent hover:text-electric-violet-700 border-electric-violet-700 text-white text-sm py-1 px-2 rounded-md transition-all ease-in'
+                >
+                  <LinkIcon className='h-5 w-5' />
+                  Visitar
+                </a>
+              </div>
+            ) : (
+              <div class='w-fit rounded-md bg-zinc-300/30 border-zinc-400 text-zinc-500 border-2  py-1 px-2 text-sm'>
+                Proyecto Privado
+              </div>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
