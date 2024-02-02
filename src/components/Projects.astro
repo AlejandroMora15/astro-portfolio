@@ -1,0 +1,49 @@
+---
+import FoldersIcon from '../icons/FoldersIcon.astro';
+import Carousel from './Carousel.astro';
+
+const data = [
+  {
+    name: 'PQRExtractor',
+    photos: ['/pqrextractor-1.png', '/pqrextractor-2.png'],
+    description:
+      'Herramienta web y móvil que hace uso de un modelo entrenado de lenguaje natural para clasificar los PQRs que llegan a la Empresa de Energía de Pereira.',
+    techs: ['Typescript', 'Python', 'React', 'React Native', 'Flask'],
+  },
+];
+---
+
+<section class='w-full'>
+  <div class='flex gap-3 justify-center items-center mb-12'>
+    <FoldersIcon className='h-9 w-9 text-electric-violet-800' />
+    <h2
+      class='text-center text-2xl lg:text-3xl font-semibold text-electric-violet-800'
+    >
+      Proyectos
+    </h2>
+  </div>
+  <ul class='flex flex-col gap-8 items-center'>
+    {
+      data.map(({ name, photos, techs, description }) => (
+        <li class='w-full sm:w-[600px] flex flex-col backdrop-blur-sm bg-white/30 rounded-lg shadow-lg'>
+          <div class='rounded-lg min-w-72'>
+            <Carousel client:load photos={photos} />
+          </div>
+          <div class='flex flex-col gap-4 p-4'>
+            <h3 class='text-lg md:text-xl font-semibold text-electric-violet-800'>
+              {name}
+            </h3>
+            <div class='flex gap-2'>
+              {techs.map((tech) => (
+                <span class='bg-electric-violet-100 border-[1px] border-electric-violet-800 text-electric-violet-800 px-2 py-1 rounded-md text-xs'>
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <p class='text-zinc-700'>{description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
